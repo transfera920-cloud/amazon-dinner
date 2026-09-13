@@ -28,6 +28,11 @@ async function startServer() {
 
   app.get('/api/health', (_req, res) => res.json({ ok: true }));
 
+  // Prevent SPA fallback from intercepting unmatched /api routes
+  app.all('/api/*', (_req, res) => {
+    res.status(404).json({ error: 'API route not found' });
+  });
+
   // Vite middleware for development
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({

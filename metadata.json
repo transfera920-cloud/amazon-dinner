@@ -1,0 +1,6 @@
+{
+  "name": "下山慶功宴搜尋",
+  "description": "輸入登山口名稱，透過 Google Maps 搜尋附近的餐廳、火鍋、麵店、便利商店等地點，依開車時間篩選。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
